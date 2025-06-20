@@ -3,16 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <title>Paisajes Sensibles</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
   <style>
     html, body {
       margin: 0;
       padding: 0;
       height: 100%;
-      overflow: hidden;
-      font-family: 'Cormorant Garamond', serif;
+      overflow-x: hidden;
+      font-family: 'Space Grotesk', sans-serif;
       color: #594F32;
-      text-align: center;
       background: linear-gradient(-45deg, #F2E8E4, #F2D888, #FADADD, #D98C5F);
       background-size: 400% 400%;
       animation: gradientBG 15s ease infinite;
@@ -24,38 +23,39 @@
       100% { background-position: 0% 50%; }
     }
 
-    body > .content {
-      padding: 50px;
-      position: relative;
-      z-index: 1;
+    .content {
+      padding: 60px 80px;
+      max-width: 1400px;
     }
 
     h1 {
-      font-size: 3em;
+      font-size: 3.5em;
+      font-weight: 700;
       margin-bottom: 40px;
       color: #8C3A4A;
+      text-align: left;
+      letter-spacing: -1px;
     }
 
     .galeria {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+      justify-content: start;
     }
 
     .obra {
-      width: 300px;
-      border-radius: 16px;
+      border-radius: 20px;
       overflow: hidden;
-      background-color: rgba(250, 218, 221, 0.9);
+      background-color: rgba(250, 218, 221, 0.85);
       border: 2px solid #D98C5F;
-      box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
       transition: transform 0.3s ease;
       cursor: pointer;
     }
 
     .obra:hover {
-      transform: scale(1.05);
+      transform: scale(1.02);
     }
 
     .obra iframe {
@@ -66,10 +66,22 @@
     }
 
     .titulo-obra {
-      padding: 15px;
-      font-size: 1.3em;
+      padding: 12px 20px;
+      font-size: 1.1em;
+      font-weight: 500;
       color: #8C3737;
       background-color: #F2D888;
+    }
+
+    @media (max-width: 600px) {
+      .content {
+        padding: 30px 20px;
+      }
+
+      h1 {
+        font-size: 2.2em;
+        text-align: left;
+      }
     }
   </style>
 </head>
@@ -80,22 +92,22 @@
     <div class="galeria">
       <div class="obra" onclick="window.open('https://tuusuario.github.io/bruma-suave/', '_blank')">
         <iframe src="https://tuusuario.github.io/bruma-suave/"></iframe>
-        <div class="titulo-obra"> ..... </div>
+        <div class="titulo-obra">Bruma Suave</div>
       </div>
 
       <div class="obra" onclick="window.open('https://tuusuario.github.io/susurro-rosado/', '_blank')">
         <iframe src="https://tuusuario.github.io/susurro-rosado/"></iframe>
-        <div class="titulo-obra"> ..... </div>
+        <div class="titulo-obra">Susurro Rosado</div>
       </div>
 
       <div class="obra" onclick="window.open('https://tuusuario.github.io/lluvia-del-crepusculo/', '_blank')">
         <iframe src="https://tuusuario.github.io/lluvia-del-crepusculo/"></iframe>
-        <div class="titulo-obra"> ..... </div>
+        <div class="titulo-obra">Lluvia del Crepúsculo</div>
       </div>
 
       <div class="obra" onclick="window.open('https://tuusuario.github.io/hojas-que-cantan/', '_blank')">
         <iframe src="https://tuusuario.github.io/hojas-que-cantan/"></iframe>
-        <div class="titulo-obra"> ..... </div>
+        <div class="titulo-obra">Hojas que Cantan</div>
       </div>
     </div>
   </div>
